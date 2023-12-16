@@ -27,7 +27,7 @@ func main() {
 		for i := 0; i < length; i++ {
 			random -= float64(rewards[i])
 			if random <= 0 {
-				countById[i] = countById[i] + 1
+				countById[i]++
 				break
 			}
 		}
