@@ -10,11 +10,11 @@ fn main() {
     let mut count_by_id = vec![0; length];
     let run_count = 100000000;
 
-    let start = Instant::now();
-
-    // slower but more secure let mut rng = thread_rng();
+    // let mut rng = thread_rng();
+    // let mut rng = Xoshiro256Plus::seed_from_u64(0);
     // for more information, see https://rust-random.github.io/book/guide-rngs.html
     let mut rng = SmallRng::from_entropy();
+    let start = Instant::now();
     for _ in 0..run_count {
         let mut random: f64 = rng.gen::<f64>() * total_percent;
         for i in 0..length {
