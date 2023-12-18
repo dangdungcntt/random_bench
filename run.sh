@@ -7,4 +7,4 @@ node random_bench.js
 echo "\n[$(php -v | head -n 1)]"
 php random_bench.php
 echo "\n[$(cargo --version | head -n 1)]"
-cargo run --bin random_bench --quiet
+cargo run --bin random_bench --quiet --release
